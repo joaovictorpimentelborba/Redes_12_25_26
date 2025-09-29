@@ -21,7 +21,7 @@
     margin-bottom: 5rem;
 }
 
-.item{
+#item{
     flex-basis: auto;
     display: flex;
     width: 1.5rem;
