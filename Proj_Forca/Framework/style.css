@@ -5,13 +5,14 @@
 
 }
 
-#titulo,#button_index,#palavra,#alfabeto,.imgs{
+#titulo,#button_index,#palavra,#alfabeto,#cmc,.imgs{
     align-items: center;
     text-align: center;
     margin-left: 20rem;
     margin-right: 20rem;
 }
-#palavra{
+
+#cmc,#palavra{
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
