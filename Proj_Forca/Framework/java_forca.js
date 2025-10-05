@@ -12,6 +12,7 @@ let num = 0;
 cmc.addEventListener("click", inserir);
 
 function inserir() {
+    img_forca.src="imgs/forca_branco_sem_nada.png"
     txt.innerHTML = ""; //innerHTML???
     num = Math.floor(Math.random() *50);
     p_escolida = palavra[num];
@@ -62,7 +63,7 @@ btns.forEach(btn => {
 
             }
             else {
-                i
+                img_forca.src="imgs/forca_branco_sem_tronco.png"
             }
         }
     });
