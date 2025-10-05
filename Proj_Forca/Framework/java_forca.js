@@ -61,6 +61,9 @@ btns.forEach(btn => {
                 l_div.textContent = btn_letra.toUpperCase();
 
             }
+            else {
+                i
+            }
         }
     });
 });
