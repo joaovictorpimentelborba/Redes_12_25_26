@@ -39,3 +39,38 @@
     
     
 }
+#txt_jogo {
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; 
+  flex-wrap: wrap;
+  gap: 0px,15px,0px,15px;
+  
+}
+
+.letra-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;  /* força underscore sempre no fundo */
+  height: 100px;              /* altura total da caixinha */
+}
+
+.letra {
+  font-size: 3rem;
+  line-height: 1px;
+  height: 50px;               /* reserva espaço fixo para a letra */
+  display: flex;
+  align-items: flex-end;       /* alinha a letra para baixo */
+  justify-content: center;
+}
+
+.underscore {
+  font-size: 1rem;
+  line-height: 0px;
+  height: 20px;               /* altura fixa do underscore */
+  display: flex;
+  align-items: flex-end;     /* alinha o underscore para cima */
+  justify-content: center;
+}
