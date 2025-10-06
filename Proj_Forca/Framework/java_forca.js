@@ -8,12 +8,14 @@ let palavra = ["equusasinus", "anta", "aranha", "alce", "besouro", "bagre", "bor
 
 let p_escolida = "";
 let num = 0;
+let erro = 0;
 
 cmc.addEventListener("click", inserir);
 
 function inserir() {
-    img_forca.src="imgs/forca_branco_sem_nada.png"
+    img_forca.src="imgs/ima0.png"
     txt.innerHTML = ""; //innerHTML???
+    erro = 0;
     num = Math.floor(Math.random() *50);
     p_escolida = palavra[num];
 
@@ -50,7 +52,7 @@ function inserir() {
 btns.forEach(btn => {
 
     btn.addEventListener("click", () => {
-
+        let erro = 0;
         let btn_letra = btn.textContent.toLowerCase();
 
         for (let i = 0; i < p_escolida.length; i++) {
@@ -62,9 +64,12 @@ btns.forEach(btn => {
                 l_div.textContent = btn_letra.toUpperCase();
 
             }
-            else {
-                img_forca.src="imgs/forca_branco_sem_tronco.png"
+            else if (p_escolida[i] != btn_letra) {
+                erro++;
+                img_forca.src = "imgs/ima" + erro + ".png";
             }
+            
         }
     });
 });
+
