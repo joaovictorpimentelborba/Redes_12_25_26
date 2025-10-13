@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <body>
+        <h1>Aluno</h1>
+        <!-- action=ficheiro php que ira buscar 
+         usar o method="post" por ser mais seguro -->
+        <form action="rev2.php" method="get">
+
+            <label for="nome">Nome do aluno: </label>
+            <input type="text" name="nome" id="nome" required>  <!-- input elementos como caixa de texto, botão etc.. -->
+            <br>
+            
+
+            <label for="Morada">Morada</label>
+            <input type="text" name="morada" id="morada_al" required>
+            <br>
+
+            <label for="Contacto">Contacto</label>
+            <input type="tel" name="telefone" id="tel">
+            <br>
+            
+            <label for="data_nasc">Data de Nascimento</label>
+            <input type="date" name="data_nasc" id="nasc">
+            <br>
+
+            <label for="genero">Genero</label>
+            <label for="op1">Masculino</label>
+            <input type="radio" name="genero" id="masc" value="M" checked>
+            <label for="op1">Feminino</label> <!-- value envia o dentro do "" para o php -->
+            <input type="radio" name="genero" id="fem" value="F">
+            <br>
+
+            <label for="escola">Escola:</label>
+            <select name="escola" id="escola_al">
+                <option value="GP">ES Gabrieal Pereira</option>
+                <option value="EBAR">EB Andre de resende</option>
+                <option value="outro">Outra</option>
+            </select>
+            <br>
+
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email_al"> <!-- pattern="este campo tem de ter determinados elementos, pesquisar html pattern required, ou ao chat GPT" -->
+            <br>
+            
+            <label for="pass">Password: </label>
+            <input type="password" name="pass" id="pass_al" minlength="8" maxlength="15">
+            <br>
+
+            <label for="notas">Notas: </label>
+            <br>
+            <textarea name="notas" id="notas_al" cols="30" rows="5">Escreva aqui: </textarea> <!-- caixa de texto que pode servir como notas sobre algo-->
+            <br>
+
+            <input type="range" name="range" id="range">
+            <br>
+            <input type="reset" value="reset">
+            <br>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </body>
+</body>
+</html>
