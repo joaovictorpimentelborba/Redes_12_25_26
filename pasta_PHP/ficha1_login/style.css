@@ -4,11 +4,11 @@
     font-family: Arial, sans-serif;
     background-color: #e1e8e8;
 }
-
 #central{
     align-items: center;
     text-align: center;
-    margin-top: 20rem;
+    margin-top: 10rem;
+    
 }
 #btn{
     border-radius: 2rem;
@@ -20,4 +20,19 @@
 
 .input{
     border-radius: 0.6rem;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#044f4f 94%,#5a5a5a00) top/8px 8px no-repeat,
+    conic-gradient(#5a5a5a00 30%,#044f4f);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation: l13 1s infinite linear;
+}
+@keyframes l13{ 
+  100%{transform: rotate(1turn)}
 }
