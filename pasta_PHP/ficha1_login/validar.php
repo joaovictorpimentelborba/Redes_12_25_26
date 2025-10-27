@@ -1,5 +1,5 @@
 <?php 
-$user_html=htmlspecialchars($_REQUEST["nome"]);
+$user_html=htmlspecialchars($_REQUEST["user"]);
 $pass_html=htmlspecialchars($_REQUEST["pass"]);
 
 $S_users=array("Ana","Pedro","Rui","Carlos");
@@ -10,26 +10,29 @@ $S_pass=array("S_ana","S_pedro","S_rui","S_carlos");
 $ADM_pass=array("ADM_ricardo","ADM_jose","ADM_leonardo","ADM_martin");
 $N_pass=array("N_joao","N_ivan","N_franciscocanivete","N_guilherme");
 
-for($i=0; $i>3; $i++){
-    if($S_users[$i]==$user_html){
-        if($S_pass[$i]==$pass_html){
-            echo"Bem vindo "+$S_users[$i];
-        }
-    }
-    else if($ADM_users[$i]==$user_html){
-        if($ADM_pass[$i]==$pass_html){
-            echo"Bem vindo "+$S_users[$i];
-        }
-    }
-    else if($N_users[$i]==$user_html){
-        if($N_pass[$i]==$pass_html){
-            echo"Bem vindo "+$S_users[$i];
-        }
-    }
-    else{
-        echo"Saia daqui seu negro";
-    }
+$entrou=false;
+
+for($i=0; $i<4; $i++){
     
+    if($S_users[$i]==$user_html && $S_pass[$i]==$pass_html){
+        
+        echo"Bem vindo " . $S_users[$i];
+        $entrou=true;
+    }
+    else if($ADM_users[$i]==$user_html && $ADM_pass[$i]==$pass_html){
+        
+        echo"Bem vindo " . $ADM_users[$i];
+        $entrou=true;
+    }
+    else if($N_users[$i]==$user_html && $N_pass[$i]==$pass_html){
+        
+        echo"Bem vindo " . $N_users[$i];
+        $entrou=true;
+        
+    }   
+}
+if($entrou==false){
+    echo"!ERRO AO ENTRAR!";
 }
 
 ?>
