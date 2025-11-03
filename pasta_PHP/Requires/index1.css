@@ -2,11 +2,17 @@
     margin: 0;
     padding: 0;
 }
-
+h1{
+    width: fit-content;
+}
 header{
     padding: 30px;
     background-color: darkred;
     text-align:center;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
 }
 footer{
     background-color: darkred;
@@ -18,12 +24,16 @@ footer{
 nav{
     padding: 5px;
     background-color: rgb(62, 0, 0);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 nav > a{
     text-decoration: none;
     color: lightgray;
     font-weight: bold;
+    margin: 0px 20px 0px 20px;
 }
 
 #Titulo{
@@ -34,4 +44,9 @@ nav > a{
 footer > a {
     text-decoration: none;
     color: lightcoral;
+}
+
+form{
+    margin: 10px;
+    padding: 10px;
 }
