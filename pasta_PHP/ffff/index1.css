@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    padding: 30px;
+    background-color: darkred;
+    text-align:center;
+}
+footer{
+    background-color: darkred;
+    color: white;
+    font-weight: bold;
+
+}
+
+nav{
+    padding: 5px;
+    background-color: rgb(62, 0, 0);
+}
+
+nav > a{
+    text-decoration: none;
+    color: lightgray;
+    font-weight: bold;
+}
+
+#Titulo{
+    color: lightgray;
+    font-size: 150px;
+
+}
+footer > a {
+    text-decoration: none;
+    color: lightcoral;
+}
