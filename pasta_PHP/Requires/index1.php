@@ -56,7 +56,7 @@
     
     ?>
 
-    <?php 
+    <?php
     include "footer.php";
     ?>
 </body>
