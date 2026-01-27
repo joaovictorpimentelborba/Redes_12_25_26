@@ -1,0 +1,41 @@
+
+.carrocel{
+    margin: 100px auto;
+    width: 30%;
+    display: flex;
+    overflow-x: auto;
+    background:linear-gradient(to left, trasparent 0%,black) ;
+    -ms-overflow-style:none ;
+    scrollbar-width: none;
+}
+.group{
+    display: flex;
+    text-align: center;
+    align-content: center;
+    gap: 1em;
+    animation: spin 10s infinite linear;
+    padding-right: 1em;
+    
+}
+.card{
+    flex:0 0 5em;
+    height: 5em;
+    padding: 1em;
+    background:cornflowerblue ;
+    font-size: 3em;
+    border-radius:2em;
+    text-align: center;
+    align-content: center;
+    opacity: 20%;
+}
+.item{
+    opacity: 20%;
+}
+.item:hover{
+    transition: all 0.2s ease-in-out;
+    opacity: 100%;
+}
+@keyframes spin{
+    from{translate: 0;}
+    to{translate: -100%;}
+}
