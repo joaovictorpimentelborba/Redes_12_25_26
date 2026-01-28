@@ -1,10 +1,28 @@
 
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family:'Montserrat';
+    font-weight: 300;
+    font-style: italic;
+    /* color: #274873; */
+
+    padding: 0;
+    margin: 0;
+    
+}
+header{
+    background:linear-gradient(to left, transparent 20%,#274873);  
+    /* background-color: #274873; */
+    color: #bfd5d8;
+    padding: 10px 10px;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------- */
 .carrocel{
     margin: 100px auto;
-    width: 30%;
+    width: 80%; 
     display: flex;
     overflow-x: auto;
-    background:linear-gradient(to left, trasparent 0%,black) ;
     -ms-overflow-style:none ;
     scrollbar-width: none;
 }
@@ -29,13 +47,18 @@
     opacity: 20%;
 }
 .item{
-    opacity: 20%;
+    opacity: 35%;
 }
 .item:hover{
     transition: all 0.2s ease-in-out;
     opacity: 100%;
 }
+/* -------------------------------------------------------------------------------------------------------------------------------- */
 @keyframes spin{
     from{translate: 0;}
     to{translate: -100%;}
+}
+button{
+    border-style: none;
+    background-color: transparent;
 }
