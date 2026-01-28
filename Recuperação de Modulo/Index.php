@@ -16,28 +16,34 @@
         <h1>FitLife ajuda a saber mais sobre ti</h1>
     </header>
     <Main>
-        <div class="carrocel">
-            <div class="group">
-                <button><img src="imgs/Calcular Gordura Corporal.png" alt="" class="item gordura"
-                        width="250px"></img></button>
-                <button><img src="imgs/Calcular IMC.png" alt="" class="item imc" width="250px"></img></button>
-                <button><img src="imgs/Calculadora de Calorias.png" alt="" class="item cal"
-                        width="250px"></img></button>
+        <form action="" method="get">
+
+            <div class="carrocel">
+                <div class="group">
+                    <button><img src="imgs/Calcular Gordura Corporal.png" alt="" class="item gordura"
+                            width="250px"></img></button>
+                    <button><img src="imgs/Calcular IMC.png" alt="" class="item imc" width="250px"></img></button>
+                    <button><img src="imgs/Calculadora de Calorias.png" alt="" class="item cal"
+                            width="250px"></img></button>
+                </div>
+                <div class="group">
+                    <button><img src="imgs/Calcular Gordura Corporal.png" alt="" class="item gordura"
+                            width="250px"></img></button>
+                    <button><img src="imgs/Calcular IMC.png" alt="" class="item imc" width="250px"></img></button>
+                    <button><img src="imgs/Calculadora de Calorias.png" alt="" class="item"
+                            width="250px"></img></button>
+                </div>
+                <div class="group">
+                    <button><img src="imgs/Calcular Gordura Corporal.png" alt="" class="item gordura"
+                            width="250px"></img></button>
+                    <button><img src="imgs/Calcular IMC.png" alt="" class="item imc" width="250px"></img></button>
+                    <button><img src="imgs/Calculadora de Calorias.png" alt="" class="item cal"
+                            width="250px"></img></button>
+                </div>
             </div>
-            <div class="group">
-                <button><img src="imgs/Calcular Gordura Corporal.png" alt="" class="item gordura"
-                        width="250px"></img></button>
-                <button><img src="imgs/Calcular IMC.png" alt="" class="item imc" width="250px"></img></button>
-                <button><img src="imgs/Calculadora de Calorias.png" alt="" class="item" width="250px"></img></button>
-            </div>
-            <div class="group">
-                <button><img src="imgs/Calcular Gordura Corporal.png" alt="" class="item gordura"
-                        width="250px"></img></button>
-                <button><img src="imgs/Calcular IMC.png" alt="" class="item imc" width="250px"></img></button>
-                <button><img src="imgs/Calculadora de Calorias.png" alt="" class="item cal"
-                        width="250px"></img></button>
-            </div>
-        </div>
+
+        </form>
+
     </Main>
 
 </body>
@@ -46,6 +52,6 @@
 
 <?php 
 
-
+    
 
 ?>
