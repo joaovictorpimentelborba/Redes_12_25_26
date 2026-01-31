@@ -19,32 +19,41 @@
         <form method="get">
 
             <div class="carrocel">
-                <div class="group">
-                    <button>
-                        <img src="imgs/Calcular Gordura Corporal.png" alt="" class="item gordura" width="250px"></img>
-                    </button>
-                    <button>
-                        <img src="imgs/Calcular IMC.png" alt="" class="item imc" width="250px"></img></button>
-                    <button>
-                        <button>
-                            <img src="imgs/Calculadora de Calorias.png" alt="" class="item cal"
-                                width="250px"></img></button>
-                    </button>
 
-                </div>
                 <div class="group">
-                    <button><img src="imgs/Calcular Gordura Corporal.png" alt="" class="item gordura"
-                            width="250px"></img></button>
-                    <button><img src="imgs/Calcular IMC.png" alt="" class="item imc" width="250px"></img></button>
-                    <button><img src="imgs/Calculadora de Calorias.png" alt="" class="item"
-                            width="250px"></img></button>
+                    <button type="submit" name="op" value="gordura">
+                        <img src="imgs/Calcular Gordura Corporal.png" alt="" class="item" width="250px"></img>
+                    </button>
+                    <button type="submit" name="op" value="imc">
+                        <img src="imgs/Calcular IMC.png" alt="" class="item" width="250px"></img>
+                    </button>
+                    <button type="submit" name="op" value="calorias">
+                        <img src="imgs/Calculadora de Calorias.png" alt="" class="item" width="250px"></img>
+                    </button>
                 </div>
+
                 <div class="group">
-                    <button><img src="imgs/Calcular Gordura Corporal.png" alt="" class="item gordura"
-                            width="250px"></img></button>
-                    <button><img src="imgs/Calcular IMC.png" alt="" class="item imc" width="250px"></img></button>
-                    <button><img src="imgs/Calculadora de Calorias.png" alt="" class="item cal"
-                            width="250px"></img></button>
+                    <button type="submit" name="op" value="gordura">
+                        <img src="imgs/Calcular Gordura Corporal.png" alt="" class="item" width="250px"></img>
+                    </button>
+                    <button type="submit" name="op" value="imc">
+                        <img src="imgs/Calcular IMC.png" alt="" class="item" width="250px"></img>
+                    </button>
+                    <button type="submit" name="op" value="calorias">
+                        <img src="imgs/Calculadora de Calorias.png" alt="" class="item" width="250px"></img>
+                    </button>
+                </div>
+
+                <div class="group">
+                    <button type="submit" name="op" value="gordura">
+                        <img src="imgs/Calcular Gordura Corporal.png" alt="" class="item" width="250px"></img>
+                    </button>
+                    <button type="submit" name="op" value="imc">
+                        <img src="imgs/Calcular IMC.png" alt="" class="item" width="250px"></img>
+                    </button>
+                    <button type="submit" name="op" value="calorias">
+                        <img src="imgs/Calculadora de Calorias.png" alt="" class="item" width="250px"></img>
+                    </button>
                 </div>
             </div>
 
@@ -55,9 +64,17 @@
 </body>
 
 </html>
-
 <?php 
 
+    $op=$_REQUEST["op"];
     
-
+    if ($op="gordura"){
+        header("location:gordura.php");
+    }
+    elseif($op="imc"){
+        header("location:imc.php");
+    }
+    else{
+        header("location:calorias.php");
+    }
 ?>
