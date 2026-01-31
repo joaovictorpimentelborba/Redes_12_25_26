@@ -16,15 +16,21 @@
         <h1>FitLife ajuda a saber mais sobre ti</h1>
     </header>
     <Main>
-        <form action="" method="get">
+        <form method="get">
 
             <div class="carrocel">
                 <div class="group">
-                    <button><img src="imgs/Calcular Gordura Corporal.png" alt="" class="item gordura"
-                            width="250px"></img></button>
-                    <button><img src="imgs/Calcular IMC.png" alt="" class="item imc" width="250px"></img></button>
-                    <button><img src="imgs/Calculadora de Calorias.png" alt="" class="item cal"
-                            width="250px"></img></button>
+                    <button>
+                        <img src="imgs/Calcular Gordura Corporal.png" alt="" class="item gordura" width="250px"></img>
+                    </button>
+                    <button>
+                        <img src="imgs/Calcular IMC.png" alt="" class="item imc" width="250px"></img></button>
+                    <button>
+                        <button>
+                            <img src="imgs/Calculadora de Calorias.png" alt="" class="item cal"
+                                width="250px"></img></button>
+                    </button>
+
                 </div>
                 <div class="group">
                     <button><img src="imgs/Calcular Gordura Corporal.png" alt="" class="item gordura"
