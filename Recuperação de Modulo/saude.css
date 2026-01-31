@@ -2,14 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 *{
-    font-family:'Montserrat';
-    font-weight: 300;
-    font-style: italic;
-    /* color: #274873; */
-
     padding: 0;
     margin: 0;
     
+}
+body{
+    font-family:'Montserrat';
+    font-weight: 300;
 }
 header{
     background:linear-gradient(to left, transparent 20%,#274873);  
@@ -17,7 +16,58 @@ header{
     color: #bfd5d8;
     padding: 10px 10px;
 }
-/* -------------------------------------------------------------------------------------------------------------------------------- */
+.pai{
+    display: flex;
+    gap: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.pai::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:url("imgs/background1.jpg") repeat-x; 
+    opacity: 0.1;
+    background-size: auto 100%;
+    animation: bgMove 1000s linear infinite;
+    z-index: 0;
+}
+.pai::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to left, white 0%, rgba(255,255,255,0) 60%);
+    z-index: 1;
+}
+.filho{
+    width: 600px; 
+    padding: 50px;
+    display: flex-start; 
+    color: #274873;
+    position: relative;
+    z-index: 2;
+}
+@keyframes bgMove{
+    from { background-position: 0 0, 0 0;}
+    to   { background-position: -10000px 0,-10000px 0; }
+}
+
+.h2{
+    color: #274873;
+    text-align: center;
+}
+.h4{
+    padding-bottom: 4px;
+    text-align: justify;
+}
+
+.conteiner{
+    margin: auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
 .carrocel{
     margin: 100px auto;
     width: 80%; 
@@ -53,7 +103,7 @@ header{
     transition: all 0.2s ease-in-out;
     opacity: 100%;
 }
-/* -------------------------------------------------------------------------------------------------------------------------------- */
+
 @keyframes spin{
     from{translate: 0;}
     to{translate: -100%;}

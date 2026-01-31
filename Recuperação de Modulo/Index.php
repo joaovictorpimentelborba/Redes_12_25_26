@@ -11,10 +11,9 @@
 </head>
 
 <body>
-    <header>
-        <div><img src="imgs/logo.png" alt="" width="90px"></div>
-        <h1>FitLife ajuda a saber mais sobre ti</h1>
-    </header>
+    <?php 
+    require "header.php";
+    ?>
     <Main>
         <form method="get">
 
@@ -66,16 +65,19 @@
 
 </html>
 <?php 
-
-    $op=$_REQUEST["op"];
+$op=$_REQUEST["op"];
     
-    if ($op="gordura"){
+    if ($op=="gordura"){
         header("location:gordura.php");
+        exit;
     }
-    elseif($op="imc"){
+    elseif($op=="imc"){
         header("location:imc.php");
+        exit;
     }
-    else{
+    elseif ($op=="calorias"){
         header("location:calorias.php");
+        exit;
     }
+    
 ?>
