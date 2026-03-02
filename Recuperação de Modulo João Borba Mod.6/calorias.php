@@ -78,12 +78,12 @@
             
                 if (isset($_GET['calcular'])) {
                     
-                    $genero = $_GET['genero'];
-                    $objetivo = $_GET['objetivo'];
-                    $exer_fisico = $_GET['exer_fisico'];
-                    $idade = $_GET['idade'];
-                    $altura = $_GET['altura'];
-                    $peso = $_GET['peso'];
+                    $genero =$_REQUEST["genero"];
+                    $objetivo = $_REQUEST["objetivo"];
+                    $exer_fisico = $_REQUEST["exer_fisico"];
+                    $idade = $_REQUEST["idade"];
+                    $altura = $_REQUEST["altura"];
+                    $peso = $_REQUEST["peso"];
                     $geb=0;
                     $cal=0;
                     $gasto_total=0;
