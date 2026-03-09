@@ -2,34 +2,22 @@
 $user_html=htmlspecialchars($_REQUEST["user"]);
 $pass_html=htmlspecialchars($_REQUEST["pass"]);
 
-$S_users=array("Ana","Pedro","Rui","Carlos");
-$ADM_users=array("Ricardo","José","Leonardo","Martin");
-$N_users=array("João","Ivan","Francisco Canivete","Guilherme");
-
-$S_pass=array("S_ana","S_pedro","S_rui","S_carlos");
-$ADM_pass=array("ADM_ricardo","ADM_jose","ADM_leonardo","ADM_martin");
-$N_pass=array("N_joao","N_ivan","N_franciscocanivete","N_guilherme");
+$user_txt=file("users.txt");
+$pass_txt=file("pass.txt");
 
 $entrou=false;
 
-for($i=0; $i<4; $i++){
+for($i=0; $i < count($user_txt); $i++){
     
-    if($S_users[$i]==$user_html && $S_pass[$i]==$pass_html){
+    $user = trim($user_txt[$i]);
+    $pass = trim($pass_txt[$i]);
+
+    if($user_html==$user && $pass==$pass_html){
         
-        echo"Bem vindo " . $S_users[$i];
+        echo"Bem vindo " . $user;
         $entrou=true;
+        break;
     }
-    else if($ADM_users[$i]==$user_html && $ADM_pass[$i]==$pass_html){
-        
-        echo"Bem vindo " . $ADM_users[$i];
-        $entrou=true;
-    }
-    else if($N_users[$i]==$user_html && $N_pass[$i]==$pass_html){
-        
-        echo"Bem vindo " . $N_users[$i];
-        $entrou=true;
-        
-    }   
 }
 if($entrou==false){
     echo"!ERRO AO ENTRAR!";
