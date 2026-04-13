@@ -31,14 +31,32 @@ $resultado= $con->query($consulta1);
 
 
 if($resultado->num_rows>0){
+    echo"<table>";
+        echo"<thead>";
+            echo"<tr>";
+                echo"<td colspan='5'>Titulo</td>";
+            echo"</tr>";
+            echo"<tr>";
+                echo"<tdcolspan='5'>Data Emicao</td>";
+            echo"</tr>";
+            echo"<tr>";
+                echo"<td colspan='5'>Autor</td>";
+            echo"</tr>";
+            echo"<tr>";
+                echo"<tdcolspan='5'>Uso</td>";
+            echo"</tr>";
+        echo"</thead>";
     while($registro=$resultado->fetch_assoc()){
         echo "Titulo: ".$registro['titulo']." Data Emicao: ".$registro['data_emicao']." Autor: ".$registro['autor']." Uso: ".$registro['uso']."<br>";
     }
+    echo"</td>";
 }
 else{
     echo"nada encontrado!!!";
 }
-echo "<br>";
+echo"<br>";
+$con->close();
+
 
 
 ?>
