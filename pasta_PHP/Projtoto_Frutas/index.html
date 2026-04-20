@@ -1,0 +1,79 @@
+<?php
+
+$servidor = "localhost";
+$user = "root";
+$pass = "";
+
+$baseExiste = false;
+
+try {
+
+    $conn = new PDO("mysql:host=$servidor", $user, $pass);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // verifica se existe a base
+    $sql = "SHOW DATABASES LIKE 'db_Frutas'";
+    $resultado = $conn->query($sql);
+
+    if($resultado->rowCount() > 0){
+        $baseExiste = true;
+    }
+
+} catch(PDOException $e){
+    echo "Erro: " . $e->getMessage();
+}
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Frutaria One Piece</title>
+
+<style>
+body{
+    background:#111;
+    color:white;
+    text-align:center;
+    font-family:Arial;
+    padding-top:100px;
+}
+
+button{
+    padding:15px 30px;
+    font-size:22px;
+    background:orange;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:red;
+    color:white;
+}
+</style>
+
+</head>
+<body>
+
+<h1>🍍 Frutaria One Piece 🍍</h1>
+
+<?php if(!$baseExiste){ ?>
+
+    <h2>Sistema desligado</h2>
+
+    <form action="ligar.php" method="post">
+        <button type="submit">LIGAR</button>
+    </form>
+
+<?php } else { ?>
+
+    <h2>✅ Sistema Online</h2>
+    <p>Base de dados encontrada.</p>
+
+<?php } ?>
+
+</body>
+</html>
