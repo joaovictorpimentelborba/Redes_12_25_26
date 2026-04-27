@@ -3,13 +3,14 @@ body{
     color:white;
     text-align:center;
     font-family:Arial;
-    padding-top:100px;
+    margin: 0;
+
 }
 
 button{
     padding:15px 30px;
     font-size:22px;
-    background:orange;
+    background:darkorange;
     border:none;
     border-radius:10px;
     cursor:pointer;
@@ -18,4 +19,78 @@ button{
 button:hover{
     background:red;
     color:white;
+}
+
+//////////////////////////////////////////////////
+table{
+margin:auto;
+margin-top:30px;
+border-collapse:collapse;
+background:white;
+color:black;
+}
+
+th,td{
+padding:12px;
+border:1px solid black;
+}
+
+th{
+background:red;
+}
+
+//////////////////////////////////////////////////
+body{
+margin:0;
+background:rgb(2,148,2);
+color:white;
+font-family:Arial;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:darkgreen;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+}
+
+.login button{
+padding:10px 20px;
+font-size:18px;
+background:orange;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.login button:hover{
+background:red;
+color:white;
+}
+
+.container{
+text-align:center;
+padding-top:50px;
+}
+
+.login_box{
+width:300px;
+margin:auto;
+margin-top:100px;
+background:white;
+color:black;
+padding:30px;
+border-radius:15px;
+}
+
+input,select{
+width:90%;
+padding:10px;
+font-size:16px;
 }
