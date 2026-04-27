@@ -1,0 +1,21 @@
+body{
+    background:rgb(2, 148, 2);
+    color:white;
+    text-align:center;
+    font-family:Arial;
+    padding-top:100px;
+}
+
+button{
+    padding:15px 30px;
+    font-size:22px;
+    background:orange;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:red;
+    color:white;
+}
