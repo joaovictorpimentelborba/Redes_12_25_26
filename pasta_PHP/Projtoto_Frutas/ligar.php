@@ -32,7 +32,7 @@ mysqli_query($con,$sql);
 $sql = "CREATE TABLE IF NOT EXISTS t_produto(
 id_produto INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(100),
-preco DECIMAL(10,2),
+preco DECIMAL(20,2),
 quantidade INT,
 peso DECIMAL(10,2),
 propriedade VARCHAR(150),

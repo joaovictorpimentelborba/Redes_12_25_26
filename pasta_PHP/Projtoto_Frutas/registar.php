@@ -10,9 +10,9 @@
 
     <div class="login_box">
 
-        <h2>Login</h2>
+        <h2>Criar Conta</h2>
 
-        <form action="verificar_login.php" method="post">
+        <form action="registar_user.php" method="post">
 
             <input type="text" name="nome" placeholder="Nome" required><br><br>
             <input type="password" name="senha" placeholder="Senha" required><br><br>
@@ -24,12 +24,9 @@
 
             <br><br>
 
-            <button type="submit">Entrar</button>
+            <button type="submit">Crie Sua Conta</button>
 
         </form>
-
-        <br>
-        <a href="registar.php">Criar Conta</a>
 
     </div>
 

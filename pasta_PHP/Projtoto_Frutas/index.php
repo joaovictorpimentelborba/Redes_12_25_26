@@ -21,77 +21,78 @@ if($con)
 
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-<meta charset="UTF-8">
-<title>Loja Frutas</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Loja Frutas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<?php if($ligado){ ?>
 
-<header>
-<div class="logo">
-🍎 Frutas do Luffy
-</div>
+    <?php if($ligado){ ?>
 
-<div class="login">
-    <a href="login.php">
-        <button>LOGIN</button>
-    </a>
-</div>
-</header>
-<?php }?>
-<?php
+    <header>
+        <div class="logo">
+            🍎 Frutas do Luffy
+        </div>
 
-<div class="container">
+        <div class="login">
+            <a href="login.php">
+                <button>LOGIN</button>
+            </a>
+        </div>
+    </header>
 
-<?php if($ligado){ ?>
+    <?php } ?>
 
-<h1>Bem vindo à loja Frutas do Luffy 🍎</h1>
+    <div class="container">
 
-<?php
+        <?php if($ligado){ ?>
 
-$sql = "SELECT * FROM t_produto";
-$resultado = mysqli_query($con,$sql);
+        <h1>Bem vindo à loja Frutas do Luffy 🍎</h1>
 
-echo "<table border='1' align='center' cellpadding='10'>";
-echo "<tr>";
-echo "<th>Numero</th>";
-echo "<th>Nome</th>";
-echo "<th>Preço</th>";
-echo "<th>Quantidade</th>";
-echo "<th>Peso</th>";
-echo "<th>Propriedade</th>";
-echo "</tr>";
+        <?php
+    $sql = "SELECT * FROM t_produto";
+    $resultado = mysqli_query($con,$sql);
 
-while($registro = mysqli_fetch_assoc($resultado))
-{
+    echo "<table border='1' align='center' cellpadding='10'>";
     echo "<tr>";
-
-    echo "<td>".$registro['id_produto']."</td>";
-    echo "<td>".$registro['nome']."</td>";
-    echo "<td>".$registro['preco']." €</td>";
-    echo "<td>".$registro['quantidade']."</td>";
-    echo "<td>".$registro['peso']." kg</td>";
-    echo "<td>".$registro['propriedade']."</td>";
-
+    echo "<th>Numero</th>";
+    echo "<th>Nome</th>";
+    echo "<th>Preço</th>";
+    echo "<th>Quantidade</th>";
+    echo "<th>Peso</th>";
+    echo "<th>Propriedade</th>";
     echo "</tr>";
-}
 
-echo "</table>";
+    while($registro = mysqli_fetch_assoc($resultado))
+    {
+        echo "<tr>";
 
-?>
+        echo "<td>".$registro['id_produto']."</td>";
+        echo "<td>".$registro['nome']."</td>";
+        echo "<td>".$registro['preco']." €</td>";
+        echo "<td>".$registro['quantidade']."</td>";
+        echo "<td>".$registro['peso']." kg</td>";
+        echo "<td>".$registro['propriedade']."</td>";
 
-<?php } else { ?>
+        echo "</tr>";
+    }
 
-<form action="ligar.php" method="post">
-<button type="submit">CONECTAR BASE DE DADOS</button>
-</form>
+    echo "</table>";
+    ?>
 
-<?php } ?>
+        <?php } else { ?>
 
-</div>
+        <form action="ligar.php" method="post">
+            <button type="submit">CONECTAR BASE DE DADOS</button>
+        </form>
+
+        <?php } ?>
+
+    </div>
 
 </body>
+
 </html>

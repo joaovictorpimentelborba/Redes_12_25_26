@@ -7,7 +7,6 @@
     <title>Index</title>
     <link rel="stylesheet" href="saude.css">
     <link rel="shortcut icon" href="imgs/logo.jpeg" type="image/x-icon">
-
 </head>
 
 <body>
