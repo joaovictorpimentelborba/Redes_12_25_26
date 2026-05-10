@@ -9,6 +9,8 @@ if(!$con)
 mysqli_query($con,"CREATE DATABASE IF NOT EXISTS db_frutas");
 mysqli_select_db($con,"db_frutas");
 
+
+
 //////////////////////////////////////////////////////////////fornecedor
 $sql = "CREATE TABLE IF NOT EXISTS t_fornecedor(
 id_fornecedor INT AUTO_INCREMENT PRIMARY KEY,
@@ -39,6 +41,21 @@ propriedade VARCHAR(150),
 id_fornecedor INT,
 FOREIGN KEY(id_fornecedor)
 REFERENCES t_fornecedor(id_fornecedor)
+)";
+mysqli_query($con,$sql);
+
+//////////////////////////////////////////////////////////////compra
+$sql = "CREATE TABLE IF NOT EXISTS t_compra(
+
+id_compra INT AUTO_INCREMENT PRIMARY KEY,
+id_cliente INT,
+id_produto INT,
+quantidade INT,
+data_compra DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+FOREIGN KEY(id_cliente) REFERENCES t_cliente(id_cliente),
+FOREIGN KEY(id_produto) REFERENCES t_produto(id_produto)
+
 )";
 mysqli_query($con,$sql);
 
