@@ -1,0 +1,224 @@
+/* --- ESTILOS GERAIS (ESTILO WIX) --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    scroll-behavior: smooth; 
+}
+body { 
+    background-color: #f8f9fa; 
+    color: #333; 
+    line-height: 1.6; 
+}
+
+/* --- HEADER & NAVBAR --- */
+header { 
+    background-color: #ffffff; 
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    left: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+    transition: transform 0.4s ease; 
+}
+.header-escondido {
+    transform: translateY(-100%); 
+}
+.nav-container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 15px 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+.logo { 
+    font-size: 22px; 
+    font-weight: bold; 
+    color: #919191; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+.logo-placeholder { 
+    width: 35px; 
+    height: 35px; 
+    background-color: #919191; 
+    border-radius: 6px; 
+    display: inline-block; 
+}
+nav ul { 
+    list-style: none; 
+    display: flex; 
+    align-items: center; 
+    gap: 30px; 
+}
+nav ul li a { 
+    text-decoration: none; 
+    color: #0056b3; 
+    font-weight: 500; 
+    transition: color 0.3s; 
+}
+nav ul li a:hover { 
+    color: #919191; 
+    text-decoration: underline;
+}
+.btn-nav { 
+    background-color: #0056b3; 
+    color: white !important; 
+    padding: 8px 20px; 
+    border-radius: 20px; 
+    font-weight: bold; 
+    transition: background 0.3s, transform 0.2s; 
+}
+.btn-nav:hover { 
+    background-color: #919191; 
+    transform: scale(1.05); 
+}
+
+/* --- SEÇÃO HERO --- */
+.hero { 
+    max-width: 1200px; 
+    margin: 120px auto 40px auto; 
+    padding: 40px 20px; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px; 
+    align-items: center; 
+}
+.hero-text h1 { 
+    font-size: 42px; 
+    color: #111; 
+    margin-bottom: 15px; 
+}
+.hero-text p { 
+    color: #666; 
+    font-size: 16px; 
+    margin-bottom: 25px; 
+}
+
+/* --- CARD DE SOLICITAÇÃO --- */
+.pedido-card { 
+    background-color: #ffffff; 
+    padding: 30px; 
+    border-radius: 16px; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08); 
+    border-top: 5px solid #0056b3; 
+}
+.pedido-card h2 { 
+    font-size: 20px; 
+    margin-bottom: 10px; 
+    color: #222; 
+}
+.pedido-card p { 
+    font-size: 13px; 
+    color: #777; 
+    margin-bottom: 20px; 
+}
+select { 
+    width: 100%; 
+    padding: 12px; 
+    border: 2px solid #e1e4e8; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    outline: none; 
+    margin-bottom: 20px; 
+    background-color: #f8f9fa; 
+    transition: border-color 0.3s; 
+}
+select:focus { 
+    border-color: #0056b3; 
+}
+.btn-submit { 
+    width: 100%; 
+    padding: 14px; 
+    background-color: #0056b3; 
+    color: white; 
+    border: none; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background 0.2s; 
+}
+.btn-submit:hover { 
+    background-color: #003d82; 
+}
+
+/* --- SEÇÃO DE CARACTERÍSTICAS --- */
+.features-section { 
+    background-color: #ffffff; 
+    padding: 60px 20px; 
+    border-top: 1px solid #eee; 
+}
+.features-container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+.features-container h2 { 
+    text-align: center; 
+    margin-bottom: 40px; 
+    font-size: 28px; 
+    color: #111; 
+}
+.features-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px; 
+}
+.feature-box { 
+    background-color: #f8f9fa; 
+    padding: 25px; 
+    border-radius: 12px; 
+    border: 1px solid #eef1f5; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+.feature-box:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+}
+.feature-icon { 
+    font-size: 24px; 
+    margin-bottom: 15px; 
+    display: inline-block; 
+}
+.feature-box h3 { 
+    font-size: 18px; 
+    margin-bottom: 10px; 
+    color: #222; 
+}
+.feature-box p { 
+    font-size: 14px; 
+    color: #666; 
+    text-align: justify; 
+}
+
+/* --- ALERTAS --- */
+.sucesso { 
+    background-color: #d4edda; 
+    color: #155724; 
+    padding: 15px; 
+    border-radius: 8px; 
+    margin-bottom: 20px; 
+    text-align: left; 
+    font-size: 14px; 
+    border-left: 5px solid #28a745; 
+}
+.erro { 
+    background-color: #f8d7da; 
+    color: #721c24; 
+    padding: 15px; 
+    border-radius: 8px; 
+    margin-bottom: 20px; 
+    text-align: left; 
+    font-size: 14px; 
+    border-left: 5px solid #dc3545; 
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; margin-top: 100px; gap: 20px; }
+    nav ul { gap: 15px; }
+}
