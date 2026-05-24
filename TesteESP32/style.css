@@ -222,3 +222,77 @@ select:focus {
     .hero { grid-template-columns: 1fr; margin-top: 100px; gap: 20px; }
     nav ul { gap: 15px; }
 }
+
+/* --- ORGANIZAÇÃO DOS CARDS EM COLUNA --- */
+.coluna-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- NOVO CARD DE STATUS LIVE --- */
+.status-card {
+    background-color: #ffffff;
+    padding: 20px 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border-left: 5px solid #28a745; /* Começa verde (Ok) */
+    transition: border-color 0.3s ease;
+}
+.status-card h3 {
+    font-size: 16px;
+    color: #111;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.status-linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 15px;
+}
+.status-linha:last-child {
+    border-bottom: none;
+}
+.status-linha span {
+    color: #666;
+}
+.status-linha strong {
+    color: #0056b3;
+}
+
+/* --- BADGES DE INTERFERÊNCIA DINÂMICOS --- */
+.badge-limpo {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.badge-alerta {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: bold;
+    animation: piscar 1s infinite alternate;
+}
+.badge-perigo {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: bold;
+    animation: piscar 0.6s infinite alternate;
+}
+
+@keyframes piscar {
+    from { opacity: 1; }
+    to { opacity: 0.6; }
+}

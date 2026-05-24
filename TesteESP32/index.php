@@ -28,48 +28,61 @@
 
     <main class="hero">
         <div class="hero-text">
-            <h1>O Futuro da Logística</h1>
+            <h1>O Futuro da Logística Interna Artesanal</h1>
             <p>O Path Runner é um veículo autônomo desenvolvido para otimizar o transporte de materiais didáticos e
                 objetos entre ambientes escolares. Equipado com sistemas inteligentes de desvio de obstáculos e
                 navegação precisa por linhas guiadas, ele garante eficiência, segurança e inovação tecnológica dentro da
                 LAN escolar.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.</p>
+                dolore magna aliqua.</p>
         </div>
 
-        <div class="pedido-card" id="solicitar">
-            <h2>Fazer Solicitação</h2>
-            <p>Selecione o destino desejado e chame o Path Runner até a sua localização na rede local.</p>
+        <div class="coluna-cards">
+            <div class="status-card">
+                <h3>📍 Monitor do Path Runner</h3>
+                <div class="status-linha">
+                    <span>Destino atual:</span>
+                    <strong id="monitor-sala">Carregando...</strong>
+                </div>
+                <div class="status-linha">
+                    <span>Estado:</span>
+                    <strong id="monitor-status">Carregando...</strong>
+                </div>
+                <div class="status-linha">
+                    <span>Interferência:</span>
+                    <span id="monitor-interferencia" class="badge-limpo">Nenhuma</span>
+                </div>
+            </div>
 
-            <?php 
-            if (isset($_GET['msg'])) {
-                if ($_GET['msg'] == 'sucesso' && isset($_GET['sala'])) {
-                    echo "<div class='sucesso'>🚀 <strong>Pedido efetuado!</strong> O Path Runner foi chamado para: " . htmlspecialchars($_GET['sala']) . ".</div>";
-                } else if ($_GET['msg'] == 'erro') {
-                    echo "<div class='erro'>❌ Erro ao salvar pedido no banco de dados.</div>";
+            <div class="pedido-card" id="solicitar">
+                <h2>Fazer Solicitação</h2>
+                <p>Selecione o destino desejado e chame o Path Runner até a sua localização.</p>
+
+                <?php 
+                if (isset($_GET['msg'])) {
+                    if ($_GET['msg'] == 'sucesso' && isset($_GET['sala'])) {
+                        echo "<div class='sucesso'>🚀 <strong>Pedido efetuado!</strong> Destino: " . htmlspecialchars($_GET['sala']) . ".</div>";
+                    } else if ($_GET['msg'] == 'erro') {
+                        echo "<div class='erro'>❌ Erro ao salvar pedido no banco de dados.</div>";
+                    }
                 }
-            }
-            ?>
+                ?>
 
-            <form method="POST" action="processa_pedido.php">
-                <label for="sala_codigo"
-                    style="display:block; text-align:left; margin-bottom:8px; font-weight:bold; color:#444; font-size: 14px;">Destino
-                    do Carrinho:</label>
-                <select name="sala_codigo" id="sala_codigo" required>
-                    <option value="" disabled selected>Escolha uma sala...</option>
-                    <option value="0">PBX (0)</option>
-                    <option value="1">Sala 07 (1)</option>
-                    <option value="2">Sala 08 (2)</option>
-                    <option value="3">Sala 09 (3)</option>
-                    <option value="4">Sala 10 (4)</option>
-                    <option value="5">Sala 11 (5)</option>
-                    <option value="6">1º Porta Auditório (6)</option>
-                    <option value="7">2º Porta Auditório (7)</option>
-                </select>
-
-                <button type="submit" class="btn-submit">Chamar Path Runner</button>
-            </form>
+                <form method="POST" action="processa_pedido.php">
+                    <select name="sala_codigo" id="sala_codigo" required>
+                        <option value="" disabled selected>Escolha uma sala...</option>
+                        <option value="0">PBX (0)</option>
+                        <option value="1">Sala 07 (1)</option>
+                        <option value="2">Sala 08 (2)</option>
+                        <option value="3">Sala 09 (3)</option>
+                        <option value="4">Sala 10 (4)</option>
+                        <option value="5">Sala 11 (5)</option>
+                        <option value="6">1º Porta Auditório (6)</option>
+                        <option value="7">2º Porta Auditório (7)</option>
+                    </select>
+                    <button type="submit" class="btn-submit">Chamar Path Runner</button>
+                </form>
+            </div>
         </div>
     </main>
 
