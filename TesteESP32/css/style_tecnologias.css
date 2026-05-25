@@ -1,0 +1,33 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background-color: #f1f3f5; color: #333; line-height: 1.6; }
+
+/* NAV / HEADER BASE (Repetido para consistência) */
+header { background-color: #ffffff; position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: transform 0.4s ease; }
+.header-escondido { transform: translateY(-100%); }
+.nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 22px; font-weight: bold; color: #0056b3; display: flex; align-items: center; gap: 10px; }
+.logo-placeholder { width: 35px; height: 35px; background-color: #0056b3; border-radius: 6px; }
+nav ul { list-style: none; display: flex; align-items: center; gap: 30px; }
+nav ul li a { text-decoration: none; color: #555; font-weight: 500; position: relative; padding-bottom: 5px; }
+nav ul li a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background-color: #0056b3; transition: width 0.3s ease; }
+nav ul li a:hover { color: #0056b3; }
+nav ul li a:hover::after { width: 100%; }
+.btn-nav { background-color: #0056b3; color: white !important; padding: 8px 20px; border-radius: 20px; font-weight: bold; transition: transform 0.2s; }
+.btn-nav::after { display: none !important; }
+.btn-nav:hover { background-color: #003d82; transform: scale(1.05); }
+
+/* GRID DE TECNOLOGIAS */
+.tech-section { padding: 140px 20px 80px 20px; }
+.tech-container { max-width: 1200px; margin: 0 auto; }
+.tech-container h2 { text-align: center; font-size: 32px; color: #111; margin-bottom: 10px; }
+.tech-subtitle { text-align: center; color: #666; font-size: 16px; margin-bottom: 50px; }
+.tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
+.tech-card { background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border-bottom: 4px solid transparent; transition: all 0.3s ease; }
+.tech-card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0, 86, 179, 0.08); border-bottom-color: #0056b3; }
+.tech-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+.tech-icon-box { font-size: 24px; background-color: #e6f0fa; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 8px; }
+.tech-card h3 { font-size: 18px; color: #222; }
+.tech-card p { font-size: 14px; color: #666; margin-bottom: 20px; text-align: justify; }
+.tech-list { list-style: none; padding-top: 15px; border-top: 1px solid #f1f3f5; }
+.tech-list li { font-size: 13px; color: #495057; margin-bottom: 8px; position: relative; padding-left: 15px; }
+.tech-list li::before { content: "•"; color: #0056b3; font-weight: bold; font-size: 16px; position: absolute; left: 0; top: -2px; }

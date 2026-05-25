@@ -4,37 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Path Runner - Sistema Logístico Autônomo</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Path Runner - Home</title>
+    <link rel="stylesheet" href="css/style_index.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="nav-container">
-            <div class="logo">
-                <div class="logo-placeholder"><img src="img/logo.png" width="100px"></div>
-                Path Runner
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#tecnologias">Tecnologias</a></li>
-                    <li><a href="#solicitar" class="btn-nav">Solicitar</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php include 'header.php'; ?>
 
     <main class="hero">
         <div class="hero-text">
-            <h1>O Futuro da Logística Interna Artesanal</h1>
+            <h1>O Futuro da Logística Interna</h1>
             <p>O Path Runner é um veículo autônomo desenvolvido para otimizar o transporte de materiais didáticos e
                 objetos entre ambientes escolares. Equipado com sistemas inteligentes de desvio de obstáculos e
-                navegação precisa por linhas guiadas, ele garante eficiência, segurança e inovação tecnológica dentro da
-                LAN escolar.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</p>
+                navegação precisa por linhas guiadas.</p>
         </div>
 
         <div class="coluna-cards">
