@@ -1,0 +1,408 @@
+/* ==========================================================================
+   1. RESET E DEFINIÇÕES GERAIS
+   ========================================================================== */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+body { 
+    background-color: #0a0a0a; /* Preto quase absoluto para o fundo do painel */
+    color: #FFFFFF;            /* Letras brancas por padrão */
+    line-height: 1.6; 
+}
+
+/* ==========================================================================
+   2. CABEÇALHO / NAVBAR (Versão Escura Exclusiva do Painel)
+   ========================================================================== */
+header {
+    background-color: #0a0a0a; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+    transition: transform 0.4s ease;
+}
+
+.header-escondido {
+    transform: translateY(-100%);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 45px;          
+    width: auto;            
+    object-fit: contain;     
+    display: block;
+    filter: invert(1); /* Inverte a logo para ficar branca, caso seja preta */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #CCCCCC;     
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; 
+    position: relative;
+    padding-bottom: 6px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #49204D; /* Roxo 1 */
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFFFFF;        
+}
+
+nav ul li a:hover::after {
+    width: 100%;           
+}
+
+.btn-nav {
+    background-color: #FFFFFF; 
+    color: #000000 !important; 
+    padding: 10px 24px;
+    border-radius: 20px;     
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-nav::after {
+    display: none !important;
+}
+
+.btn-nav:hover {
+    background-color: #4C173D; /* Roxo 2 */
+    color: #FFFFFF !important;
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(76, 23, 61, 0.4); 
+}
+
+/* ==========================================================================
+   3. ESTRUTURA DO PAINEL (DASHBOARD DARK)
+   ========================================================================== */
+.panel-section {
+    padding: 160px 20px 80px 20px; 
+    min-height: 85vh;
+    background: radial-gradient(circle at 50% 30%, rgba(73, 32, 77, 0.08) 0%, rgba(10,10,10,1) 70%);
+}
+
+.panel-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.panel-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.panel-header h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #FFFFFF; /* Título Branco */
+    margin-bottom: 10px;
+}
+
+.panel-header p {
+    font-size: 16px;
+    color: #AAAAAA;
+}
+
+.coluna-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Cartões adaptados para o fundo escuro */
+.status-card, .pedido-card {
+    background-color: #121212; /* Cinza escuro premium para os blocos */
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.status-card h3, .pedido-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ==========================================================================
+   4. DESIGN DO MONITOR EM TEMPO REAL
+   ========================================================================== */
+.status-linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.status-linha:last-child {
+    border-bottom: none;
+}
+
+.status-linha span {
+    font-size: 15px;
+    color: #BBBBBB;
+}
+
+/* Negritos/Valores destacados no Roxo 1 */
+.status-linha strong {
+    font-size: 16px;
+    color: #49204D; 
+    filter: brightness(1.3); /* Dá um leve ganho de brilho para destacar no fundo escuro */
+}
+
+/* Emblema de Interferência */
+.badge-limpo {
+    background-color: rgba(52, 168, 83, 0.15);
+    color: #49204D;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   5. DESIGN DO FORMULÁRIO DE SOLICITAÇÃO
+   ========================================================================== */
+.pedido-card p {
+    font-size: 14px;
+    color: #AAAAAA;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #DDDDDD;
+}
+
+/* Customização da Caixa de Seleção Dark */
+form select {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 15px;
+    color: #FFFFFF;
+    background-color: #1e1e1e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+form select:focus {
+    border-color: #49204D;
+    box-shadow: 0 0 0 4px rgba(73, 32, 77, 0.3);
+    background-color: #121212;
+}
+
+/* Botão de Chamar em Roxo Escuro */
+.btn-submit {
+    background-color: #4C173D; /* Roxo 2 */
+    color: #FFFFFF;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(76, 23, 61, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #FFFFFF; /* Inverte para branco no hover */
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+}
+
+/* Feedbacks do PHP */
+.sucesso, .erro {
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.sucesso {
+    background-color: rgba(52, 168, 83, 0.15);
+    border: 1px solid #34a853;
+    color: #81c995;
+}
+
+.erro {
+    background-color: rgba(234, 67, 53, 0.15);
+    border: 1px solid #ea4335;
+    color: #f28b82;
+}
+
+/* ==========================================================================
+   6. FOOTER VERSÃO ESCURA (Totalmente integrado)
+   ========================================================================== */
+footer {
+    background-color: #0a0a0a;
+    color: #CCCCCC;
+    padding: 60px 20px 30px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-integrantes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.integrante-box {
+    flex: 1;
+    text-align: center;
+    padding: 10px 40px;
+}
+
+.footer-integrantes .integrante-box:first-child {
+    border-right: 1px solid #49204D;
+}
+
+/* Nomes dos integrantes em Roxo */
+.integrante-box h4 {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    color: #49204D;
+    filter: brightness(1.2);
+}
+
+.integrante-box p {
+    font-size: 14px;
+    color: #AAAAAA;
+    margin-bottom: 4px;
+}
+
+.footer-escola {
+    text-align: center;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+}
+
+/* Nome da escola em Roxo Escuro destacado */
+.escola-nome {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    color: #4C173D;
+    filter: brightness(1.2);
+}
+
+.escola-contactos {
+    font-size: 14px;
+    color: #888888;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.divisor-ponto {
+    color: #4C173D;
+    font-weight: bold;
+}
+
+.footer-copy {
+    font-size: 12px;
+    color: #555555;
+}
+
+/* ==========================================================================
+   7. RESPONSIVIDADE
+   ========================================================================== */
+@media (max-width: 768px) {
+    .status-card, .pedido-card {
+        padding: 25px;
+    }
+
+    .footer-integrantes {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-integrantes .integrante-box:first-child {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 30px;
+    }
+    
+    .escola-contactos {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .divisor-ponto {
+        display: none;
+    }
+}

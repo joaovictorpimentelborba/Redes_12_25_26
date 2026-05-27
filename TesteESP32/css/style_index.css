@@ -1,30 +1,31 @@
 /* ==========================================================================
-   1. CONFIGURAÇÕES GERAIS E RESETS
+   1. RESET E DEFINIÇÕES GERAIS
    ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 
-body {
-    background-color: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
+body { 
+    background-color: #000000; 
+    color: #FFFFFF;            
+    line-height: 1.7; 
+    overflow-x: hidden;
 }
 
 /* ==========================================================================
-   2. CABEÇALHO / NAVBAR (Navegação superior fixa)
+   2. CABEÇALHO / NAVBAR (Branco Fixo no Topo)
    ========================================================================== */
 header {
-    background-color: #ffffff;
+    background-color: #FFFFFF; 
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(73, 32, 77, 0.05); 
     transition: transform 0.4s ease;
 }
 
@@ -35,41 +36,40 @@ header {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px 20px;
+    padding: 18px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #0056b3;
+.logo-container {
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 
-.logo-placeholder {
-    width: 35px;
-    height: 35px;
-    background-color: #0056b3;
-    border-radius: 6px;
+.logo-img {
+    height: 45px;          
+    width: auto;            
+    object-fit: contain;     
+    display: block;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 35px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #555;
-    font-weight: 500;
+    color: #000000;     
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; 
     position: relative;
-    padding-bottom: 5px;
+    padding-bottom: 6px;
     transition: color 0.3s ease;
 }
 
@@ -80,25 +80,25 @@ nav ul li a::after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #0056b3;
+    background-color: #49204D; 
     transition: width 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #0056b3;
+    color: #49204D;        
 }
 
 nav ul li a:hover::after {
-    width: 100%;
+    width: 100%;           
 }
 
 .btn-nav {
-    background-color: #0056b3;
-    color: white !important;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-weight: bold;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    background-color: #000000; 
+    color: #FFFFFF !important; 
+    padding: 10px 24px;
+    border-radius: 20px;     
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .btn-nav::after {
@@ -106,200 +106,111 @@ nav ul li a:hover::after {
 }
 
 .btn-nav:hover {
-    background-color: #003d82;
-    transform: scale(1.05);
+    background-color: #4C173D; 
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(76, 23, 61, 0.3); 
 }
 
 /* ==========================================================================
-   3. SEÇÃO HERO (Apresentação e Formulários)
+   3. HERO SECTION (Fundo Branco Puro com Letras Pretas)
    ========================================================================== */
 .hero {
+    padding: 180px 20px 80px 20px;
+    background-color: #FFFFFF; 
+}
+
+.hero-container {
     max-width: 1200px;
-    margin: 130px auto 60px auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    margin: 0 auto;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
 }
 
 .hero-text h1 {
-    font-size: 44px;
-    color: #111;
+    font-size: 48px;
+    font-weight: 800;
     line-height: 1.2;
+    color: #000000; 
     margin-bottom: 20px;
+    letter-spacing: -1px;
 }
 
 .hero-text p {
+    font-size: 18px;
+    color: #333333; 
+    margin-bottom: 35px;
+}
+
+.btn-hero-action {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #4C173D; 
+    color: #FFFFFF;
+    padding: 16px 36px;
+    border-radius: 30px;
+    font-weight: 700;
     font-size: 16px;
-    color: #666;
-}
-
-.coluna-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-/* ==========================================================================
-   4. CARDS DE INTERFACE (Pedido e Status Monitor)
-   ========================================================================== */
-.pedido-card, 
-.status-card {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-    transition: transform 0.3s ease;
-}
-
-.pedido-card {
-    border-top: 5px solid #0056b3;
-}
-
-.status-card {
-    border-left: 5px solid #28a745;
-}
-
-.pedido-card h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #111;
-}
-
-.pedido-card p {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 20px;
-}
-
-.status-card h3 {
-    font-size: 16px;
-    color: #111;
-    margin-bottom: 15px;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
+    box-shadow: 0 8px 25px rgba(76, 23, 61, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.status-linha {
+.btn-hero-action:hover {
+    background-color: #000000; 
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hero-image-placeholder {
+    flex: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px dashed #eee;
-    font-size: 15px;
+    position: relative;
+    max-width: 500px;
+    height: 380px;
+    background-color: #fcfbfe;
+    border: 1px solid rgba(73, 32, 77, 0.1);
+    border-radius: 24px;
 }
 
-.status-linha:last-child {
-    border-bottom: none;
+.glow-effect {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #49204D;
+    filter: blur(100px);
+    opacity: 0.12;
+    border-radius: 50%;
+    z-index: 1;
 }
 
-.status-linha span {
-    color: #666;
+.icon-robot {
+    font-size: 120px;
+    z-index: 2;
+    animation: floatAnimation 4s ease-in-out infinite;
 }
 
-.status-linha strong {
-    color: #0056b3;
-}
-
-/* Campos de Formulário */
-select {
-    width: 100%;
-    padding: 12px 15px;
-    border: 2px solid #e1e4e8;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    outline: none;
-    font-size: 15px;
-    background-color: #fff;
-    transition: border-color 0.2s ease;
-}
-
-select:focus {
-    border-color: #0056b3;
-}
-
-.btn-submit {
-    width: 100%;
-    padding: 14px;
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.btn-submit:hover {
-    background-color: #003d82;
-    transform: translateY(-2px);
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
 }
 
 /* ==========================================================================
-   5. COMPONENTES DE ALERTAS E BADGES DINÂMICOS
-   ========================================================================== */
-.badge-limpo {
-    background-color: #d4edda;
-    color: #155724;
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-weight: bold;
-    font-size: 13px;
-}
-
-.badge-alerta {
-    background-color: #fff3cd;
-    color: #856404;
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-weight: bold;
-    font-size: 13px;
-    animation: piscar 1s infinite alternate;
-}
-
-.badge-perigo {
-    background-color: #f8d7da;
-    color: #721c24;
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-weight: bold;
-    font-size: 13px;
-    animation: piscar 0.6s infinite alternate;
-}
-
-@keyframes piscar {
-    from { opacity: 1; }
-    to { opacity: 0.5; }
-}
-
-.sucesso, .erro {
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    font-size: 14px;
-}
-
-.sucesso {
-    background-color: #d4edda;
-    color: #155724;
-    border-left: 5px solid #28a745;
-}
-
-.erro {
-    background-color: #f8d7da;
-    color: #721c24;
-    border-left: 5px solid #dc3545;
-}
-
-/* ==========================================================================
-   6. SEÇÃO DE CARACTERÍSTICAS (FEATURES GRID)
+   4. SEÇÃO CARACTERÍSTICAS (Preto Absoluto com Degradê de Entrada)
    ========================================================================== */
 .features-section {
-    background-color: #ffffff;
-    padding: 80px 20px;
-    border-top: 1px solid #eee;
+    /* Faz a transição suave de Entrada (Branco -> Preto) */
+    background: linear-gradient(to bottom, #FFFFFF 0%, #000000 20%, #000000 100%);
+    padding: 140px 20px 160px 20px; /* Aumentado o padding inferior para preparar a saída */
 }
 
 .features-container {
@@ -309,63 +220,197 @@ select:focus {
 
 .features-container h2 {
     text-align: center;
-    font-size: 32px;
-    color: #111;
-    margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: 800;
+    color: #FFFFFF; 
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.features-container h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #49204D; 
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 
 .feature-box {
-    background-color: #f8f9fa;
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid #eef1f4;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.03); 
+    padding: 40px 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .feature-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+    background-color: rgba(73, 32, 77, 0.08);
+    border-color: rgba(73, 32, 77, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
 
 .feature-icon {
-    font-size: 28px;
+    font-size: 32px;
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .feature-box h3 {
-    font-size: 18px;
-    color: #222;
-    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #49204D; 
+    margin-bottom: 12px;
 }
 
 .feature-box p {
-    font-size: 14px;
-    color: #666;
-    text-align: justify;
+    font-size: 15px;
+    color: #CCCCCC; 
+    line-height: 1.6;
 }
 
 /* ==========================================================================
-   7. RESPONSIVIDADE (MEDIA QUERIES)
+   5. FOOTER PREMIUM (Retorno ao Branco com Detalhes Roxos)
+   ========================================================================== */
+footer {
+    /* O Segredo da Transição de Saída: O topo do footer cria um degradê suave que volta para o Branco Puro */
+    background: #FFFFFF;
+    color: #333333; /* Letras voltam a ser escuras para contraste */
+    padding: 120px 20px 40px 20px; /* Mais espaço no topo para valorizar o degradê */
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-integrantes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.integrante-box {
+    flex: 1;
+    text-align: center;
+    padding: 10px 40px;
+}
+
+.footer-integrantes .integrante-box:first-child {
+    border-right: 1px solid #49204D; /* Linha roxa perfeitamente visível no fundo branco */
+}
+
+/* Palavras em negrito (Títulos) convertidas para Roxo */
+.integrante-box h4 {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    color: #49204D; /* Roxo em destaque */
+}
+
+.integrante-box p {
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 4px;
+}
+
+.footer-escola {
+    text-align: center;
+    border-top: 1px dashed rgba(73, 32, 77, 0.2); /* Linha tracejada roxa bem suave */
+    padding-top: 30px;
+}
+
+/* Palavra em negrito Roxo */
+.escola-nome {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    color: #4C173D; /* Roxo Escuro em destaque */
+}
+
+.escola-contactos {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.divisor-ponto {
+    color: #4C173D; 
+    font-weight: bold;
+}
+
+.footer-copy {
+    font-size: 12px;
+    color: #888888;
+}
+
+/* ==========================================================================
+   6. RESPONSIVIDADE (Ajustes de Ecrã)
    ========================================================================== */
 @media (max-width: 992px) {
-    .hero {
-        grid-template-columns: 1fr;
-        margin-top: 100px;
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
         gap: 40px;
     }
     
     .hero-text {
-        text-align: center;
+        max-width: 100%;
     }
     
     .hero-text h1 {
-        font-size: 36px;
+        font-size: 38px;
+    }
+    
+    .hero-image-placeholder {
+        width: 100%;
+        max-width: 400px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-integrantes {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-integrantes .integrante-box:first-child {
+        border-right: none;
+        border-bottom: 1px solid rgba(73, 32, 77, 0.2);
+        padding-bottom: 30px;
+    }
+    
+    .escola-contactos {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .divisor-ponto {
+        display: none;
     }
 }

@@ -1,24 +1,253 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-body { background-color: #ffffff; color: #333; line-height: 1.7; }
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E RESETS
+   ========================================================================== */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
 
-/* NAV / HEADER BASE */
-header { background-color: #ffffff; position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: transform 0.4s ease; }
-.header-escondido { transform: translateY(-100%); }
-.nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 22px; font-weight: bold; color: #0056b3; display: flex; align-items: center; gap: 10px; }
-.logo-placeholder { width: 35px; height: 35px; background-color: #0056b3; border-radius: 6px; }
-nav ul { list-style: none; display: flex; align-items: center; gap: 30px; }
-nav ul li a { text-decoration: none; color: #555; font-weight: 500; position: relative; padding-bottom: 5px; }
-nav ul li a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background-color: #0056b3; transition: width 0.3s ease; }
-nav ul li a:hover { color: #0056b3; }
-nav ul li a:hover::after { width: 100%; }
-.btn-nav { background-color: #0056b3; color: white !important; padding: 8px 20px; border-radius: 20px; font-weight: bold; }
-.btn-nav::after { display: none !important; }
-.btn-nav:hover { background-color: #003d82; transform: scale(1.05); }
+body { 
+    background-color: #ffffff; 
+    color: #333; 
+    line-height: 1.7; 
+}
 
-/* CONTEÚDO SOBRE */
-.about-section { padding: 140px 20px 80px 20px; }
-.about-container { max-width: 800px; margin: 0 auto; }
-.about-container h2 { text-align: center; font-size: 32px; color: #111; margin-bottom: 10px; }
-.about-lead { text-align: center; font-size: 18px; color: #0056b3; font-weight: 600; margin-bottom: 40px; }
-.about-content p { font-size: 16px; color: #555; margin-bottom: 20px; text-align: justify; }
+/* ==========================================================================
+   2. CABEÇALHO / NAVBAR
+   ========================================================================== */
+header {
+    background-color: #FFFFFF; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(73, 32, 77, 0.05); 
+    transition: transform 0.4s ease;
+}
+
+.header-escondido {
+    transform: translateY(-100%);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 45px;          
+    width: auto;            
+    object-fit: contain;     
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;     
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; 
+    position: relative;
+    padding-bottom: 6px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #49204D; 
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #49204D;        
+}
+
+nav ul li a:hover::after {
+    width: 100%;           
+}
+
+.btn-nav {
+    background-color: #000000; 
+    color: #FFFFFF !important; 
+    padding: 10px 24px;
+    border-radius: 20px;     
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-nav::after {
+    display: none !important;
+}
+
+.btn-nav:hover {
+    background-color: #4C173D; 
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(76, 23, 61, 0.3); 
+}
+
+/* ==========================================================================
+   3. CONTEÚDO SOBRE
+   ========================================================================== */
+.about-section { 
+    padding: 160px 20px 80px 20px; /* Aumentado para 160px para o menu fixo não tapar o título */
+}
+
+.about-container { 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.about-container h2 { 
+    text-align: center; 
+    font-size: 32px; 
+    color: #111; 
+    margin-bottom: 10px; 
+}
+
+.about-lead { 
+    text-align: center; 
+    font-size: 18px; 
+    color: #49204D; /* Alterado para roxo para condizer com o novo padrão visual */
+    font-weight: 600; 
+    margin-bottom: 40px; 
+}
+
+.about-content p { 
+    font-size: 16px; 
+    color: #555; 
+    margin-bottom: 20px; 
+    text-align: justify; 
+}
+
+/* ==========================================================================
+   4. COMPONENTES DO FOOTER (O que estava em falta!)
+   ========================================================================== */
+footer {
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 60px 20px 30px 20px;
+    border-top: 1px solid #e9ecef;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-integrantes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.integrante-box {
+    flex: 1;
+    text-align: center;
+    padding: 10px 40px;
+}
+
+.footer-integrantes .integrante-box:first-child {
+    border-right: 1px solid #49204D; /* Barra vertical roxa */
+}
+
+.integrante-box h4 {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    color: #49204D;
+}
+
+.integrante-box p {
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 4px;
+}
+
+.footer-escola {
+    text-align: center;
+    border-top: 1px dashed #e9ecef;
+    padding-top: 30px;
+}
+
+.escola-nome {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.escola-contactos {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.divisor-ponto {
+    color: #4C173D;
+    font-weight: bold;
+}
+
+.footer-copy {
+    font-size: 12px;
+    color: #999999;
+}
+
+/* ==========================================================================
+   5. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .footer-integrantes {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-integrantes .integrante-box:first-child {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 30px;
+    }
+    
+    .escola-contactos {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .divisor-ponto {
+        display: none;
+    }
+}

@@ -13,58 +13,17 @@
     <?php include 'header.php'; ?>
 
     <main class="hero">
-        <div class="hero-text">
-            <h1>O Futuro da Logística Interna</h1>
-            <p>O Path Runner é um veículo autônomo desenvolvido para otimizar o transporte de materiais didáticos e
-                objetos entre ambientes escolares. Equipado com sistemas inteligentes de desvio de obstáculos e
-                navegação precisa por linhas guiadas.</p>
-        </div>
-
-        <div class="coluna-cards">
-            <div class="status-card">
-                <h3>📍 Monitor do Path Runner</h3>
-                <div class="status-linha">
-                    <span>Destino atual:</span>
-                    <strong id="monitor-sala">Carregando...</strong>
-                </div>
-                <div class="status-linha">
-                    <span>Estado:</span>
-                    <strong id="monitor-status">Carregando...</strong>
-                </div>
-                <div class="status-linha">
-                    <span>Interferência:</span>
-                    <span id="monitor-interferencia" class="badge-limpo">Nenhuma</span>
-                </div>
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>O Futuro da Logística Interna</h1>
+                <p>O Path Runner é um veículo autónomo desenvolvido para otimizar o transporte de materiais didáticos e
+                    objetos entre ambientes escolares. Equipado com sistemas inteligentes de desvio de obstáculos e
+                    navegação precisa por linhas guiadas.</p>
             </div>
 
-            <div class="pedido-card" id="solicitar">
-                <h2>Fazer Solicitação</h2>
-                <p>Selecione o destino desejado e chame o Path Runner até a sua localização.</p>
-
-                <?php 
-                if (isset($_GET['msg'])) {
-                    if ($_GET['msg'] == 'sucesso' && isset($_GET['sala'])) {
-                        echo "<div class='sucesso'>🚀 <strong>Pedido efetuado!</strong> Destino: " . htmlspecialchars($_GET['sala']) . ".</div>";
-                    } else if ($_GET['msg'] == 'erro') {
-                        echo "<div class='erro'>❌ Erro ao salvar pedido no banco de dados.</div>";
-                    }
-                }
-                ?>
-
-                <form method="POST" action="processa_pedido.php">
-                    <select name="sala_codigo" id="sala_codigo" required>
-                        <option value="" disabled selected>Escolha uma sala...</option>
-                        <option value="0">PBX (0)</option>
-                        <option value="1">Sala 07 (1)</option>
-                        <option value="2">Sala 08 (2)</option>
-                        <option value="3">Sala 09 (3)</option>
-                        <option value="4">Sala 10 (4)</option>
-                        <option value="5">Sala 11 (5)</option>
-                        <option value="6">1º Porta Auditório (6)</option>
-                        <option value="7">2º Porta Auditório (7)</option>
-                    </select>
-                    <button type="submit" class="btn-submit">Chamar Path Runner</button>
-                </form>
+            <div class="hero-image-placeholder">
+                <div class="glow-effect"></div>
+                <span class="icon-robot">🤖</span>
             </div>
         </div>
     </main>
@@ -119,6 +78,7 @@
         </div>
     </section>
 
+    <?php include 'footer.php'; ?>
     <script src="script.js"></script>
 </body>
 
