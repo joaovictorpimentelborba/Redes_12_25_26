@@ -52,18 +52,23 @@
                     ?>
 
                     <form method="POST" action="processa_pedido.php">
-                        <label for="sala_codigo">Código da Sala Destino:</label>
-                        <select name="sala_codigo" id="sala_codigo" required>
-                            <option value="" disabled selected>Escolha uma sala...</option>
-                            <option value="0">PBX (0)</option>
-                            <option value="1">Sala 07 (1)</option>
-                            <option value="2">Sala 08 (2)</option>
-                            <option value="3">Sala 09 (3)</option>
-                            <option value="4">Sala 10 (4)</option>
-                            <option value="5">Sala 11 (5)</option>
-                            <option value="6">1º Porta Auditório (6)</option>
-                            <option value="7">2º Porta Auditório (7)</option>
-                        </select>
+                        <div id="container-comboboxes">
+                            <div class="campo-combobox ativa">
+                                <label for="sala_destino_1">1º Destino:</label>
+                                <select name="salas_destino[]" id="sala_destino_1" required>
+                                    <option value="" disabled selected>Escolha a primeira sala...</option>
+                                    <option value="0">PBX (0)</option>
+                                    <option value="1">Sala 07 (1)</option>
+                                    <option value="2">Sala 08 (2)</option>
+                                    <option value="3">Sala 09 (3)</option>
+                                    <option value="4">Sala 10 (4)</option>
+                                    <option value="5">Sala 11 (5)</option>
+                                    <option value="6">1º Porta Auditório (6)</option>
+                                    <option value="7">2º Porta Auditório (7)</option>
+                                </select>
+                            </div>
+                        </div>
+
                         <button type="submit" class="btn-submit">Chamar Path Runner</button>
                     </form>
                 </div>

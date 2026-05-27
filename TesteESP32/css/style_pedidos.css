@@ -199,7 +199,7 @@ nav ul li a:hover::after {
 /* Emblema de Interferência */
 .badge-limpo {
     background-color: rgba(52, 168, 83, 0.15);
-    color: #49204D;
+    color: #81c995;
     padding: 6px 14px;
     border-radius: 20px;
     font-size: 13px;
@@ -405,4 +405,79 @@ footer {
     .divisor-ponto {
         display: none;
     }
+}
+/* ==========================================================================
+   8. COMBO BOXES DINÂMICAS (FILA DE ESPERA)
+   ========================================================================== */
+#container-comboboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.campo-combobox {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* Estado Padrão: Meio apagado */
+    opacity: 0.35;
+    pointer-events: none; /* Impede cliques enquanto estiver apagada */
+    transform: translateY(5px);
+    transition: opacity 0.4s ease, transform 0.4s ease, filter 0.3s ease;
+    filter: grayscale(100%);
+}
+
+/* Quando passamos o mouse por cima (Hover) E ela já estiver disponível */
+.campo-combobox:hover {
+    opacity: 0.7;
+}
+
+/* Quando a combo box fica 100% ativa (Liberada para o utilizador clicar e selecionar) */
+.campo-combobox.ativa {
+    opacity: 1;
+    pointer-events: auto; /* Permite interações */
+    transform: translateY(0);
+    filter: grayscale(0%);
+    
+}
+/* ==========================================================================
+   9. BOTÃO DE REMOVER COMBO BOX (X)
+   ========================================================================== */
+.titulo-combobox-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-remover-combo {
+    background: transparent;
+    border: none;
+    color: #ea4335; /* Cor vermelha para indicar remoção */
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 2px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-remover-combo:hover {
+    background-color: rgba(234, 67, 53, 0.15);
+    transform: scale(1.05);
+}
+
+/* Ajuste sutil para alinhar o select quando o botão aparece */
+.campo-combobox select {
+    width: 100%;
+}
+form select option {
+    background-color: #1e1e1e; 
+    color: #FFFFFF;
+    padding: 10px;
+}
+form select option:hover {
+    background-color:#49204D; 
+    color: #FFFFFF;
 }
