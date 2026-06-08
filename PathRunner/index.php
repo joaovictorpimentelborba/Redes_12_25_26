@@ -31,48 +31,41 @@
     <section class="features-section">
         <div class="features-container">
             <h2>Características do Dispositivo</h2>
+            <div class="carrossel-section">
+                <div class="carrossel-wrapper">
+                    <div class="carrossel-track">
+                        <div class="carrossel-item">🔋 Autonomia Estendida</div>
+                        <div class="carrossel-item">🛑 Deteção de Obstáculos</div>
+                        <div class="carrossel-item">📶 Conexão Wi-Fi Local</div>
+                        <div class="carrossel-item">👌 Fácil Utilização</div>
+                        <div class="carrossel-item">📊 Dados em Tempo Real</div>
+                        <div class="carrossel-item">📦 Capacidade de Carga</div>
 
-            <div class="features-grid">
-                <div class="feature-box">
-                    <span class="feature-icon">🔋</span>
-                    <h3>Autonomia Estendida</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mollis pretium lorem primis cubilia cut.
-                        Dictumst nisl proin primis est ut facilisis congue sodales.</p>
+                        <div class="carrossel-item">🔋 Autonomia Estendida</div>
+                        <div class="carrossel-item">🛑 Deteção de Obstáculos</div>
+                        <div class="carrossel-item">📶 Conexão Wi-Fi Local</div>
+                        <div class="carrossel-item">👌 Fácil Utilização</div>
+                        <div class="carrossel-item">📊 Dados em Tempo Real</div>
+                        <div class="carrossel-item">📦 Capacidade de Carga</div>
+                    </div>
                 </div>
 
-                <div class="feature-box">
-                    <span class="feature-icon">🛑</span>
-                    <h3>Deteção de Obstáculos</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mollis pretium lorem primis cubilia cut.
-                        Dictumst nisl proin primis est ut facilisis congue sodales.</p>
-                </div>
+                <div class="carrossel-wrapper">
+                    <div class="carrossel-track carrossel-reverso">
+                        <div class="carrossel-item">📦 Capacidade de Carga</div>
+                        <div class="carrossel-item">📊 Dados em Tempo Real</div>
+                        <div class="carrossel-item">👌 Fácil Utilização</div>
+                        <div class="carrossel-item">📶 Conexão Wi-Fi Local</div>
+                        <div class="carrossel-item">🛑 Deteção de Obstáculos</div>
+                        <div class="carrossel-item">🔋 Autonomia Estendida</div>
 
-                <div class="feature-box">
-                    <span class="feature-icon">📶</span>
-                    <h3>Conexão Wi-Fi Local</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mollis pretium lorem primis cubilia cut.
-                        Dictumst nisl proin primis est ut facilisis congue sodales.</p>
-                </div>
-
-                <div class="feature-box">
-                    <span class="feature-icon">👌</span>
-                    <h3>Fácil Utilização</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mollis pretium lorem primis cubilia cut.
-                        Dictumst nisl proin primis est ut facilisis congue sodales.</p>
-                </div>
-
-                <div class="feature-box">
-                    <span class="feature-icon">📊</span>
-                    <h3>Dados em Tempo Real</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mollis pretium lorem primis cubilia cut.
-                        Dictumst nisl proin primis est ut facilisis congue sodales.</p>
-                </div>
-
-                <div class="feature-box">
-                    <span class="feature-icon">📦</span>
-                    <h3>Capacidade de Carga</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mollis pretium lorem primis cubilia cut.
-                        Dictumst nisl proin primis est ut facilisis congue sodales.</p>
+                        <div class="carrossel-item">📦 Capacidade de Carga</div>
+                        <div class="carrossel-item">📊 Dados em Tempo Real</div>
+                        <div class="carrossel-item">👌 Fácil Utilização</div>
+                        <div class="carrossel-item">📶 Conexão Wi-Fi Local</div>
+                        <div class="carrossel-item">🛑 Deteção de Obstáculos</div>
+                        <div class="carrossel-item">🔋 Autonomia Estendida</div>
+                    </div>
                 </div>
             </div>
         </div>

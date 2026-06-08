@@ -137,9 +137,11 @@ nav ul li a:hover::after {
 }
 
 .tech-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
-    gap: 25px; 
+    display: grid;
+    /* Altera de 4 para 3 colunas máximas, adaptando-se a ecrãs mais pequenos */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
 }
 
 .tech-card { 

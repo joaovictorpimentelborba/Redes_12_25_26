@@ -414,3 +414,79 @@ footer {
         display: none;
     }
 }
+/* ==========================================================================
+   CARROSSEL INFINITO DUPLO (INDEX)
+   ========================================================================== */
+.carrossel-section {
+    padding: 60px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.carrossel-section h2 {
+    font-size: 26px;
+    margin-bottom: 35px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+
+.carrossel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    background: rgba(73, 32, 77, 0.03);
+    border-top: 1px solid rgba(73, 32, 77, 0.15);
+    border-bottom: 1px solid rgba(73, 32, 77, 0.15);
+    
+    /* Espaçamento perfeito entre as duas linhas de carrossel */
+    margin-bottom: 25px; 
+}
+
+/* Remove a borda de baixo do último carrossel para não acumular espaço */
+.carrossel-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+.carrossel-track {
+    display: flex;
+    width: max-content;
+    /* Linha padrão vai para a Esquerda */
+    animation: scrollEsquerda 25s linear infinite; 
+}
+
+/* Classe auxiliar que ativa a rotação para a Direita */
+.carrossel-reverso {
+    animation: scrollDireita 25s linear infinite;
+}
+
+.carrossel-item {
+    font-size: 18px;
+    font-weight: 700;
+    color: #49204D;
+    filter: brightness(1.3); /* Dá um ligeiro brilho ao roxo no fundo escuro */
+    padding: 0 40px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ANIMAÇÃO 1: Deslocamento contínuo para a Esquerda */
+@keyframes scrollEsquerda {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ANIMAÇÃO 2 CORRIGIDA: Começa recuado e caminha até à posição inicial */
+@keyframes scrollDireita {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
