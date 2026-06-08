@@ -52,7 +52,6 @@ header {
     width: auto;            
     object-fit: contain;     
     display: block;
-    filter: invert(1); /* Inverte a logo para ficar branca, caso seja preta */
 }
 
 nav ul {
@@ -152,11 +151,15 @@ nav ul li a:hover::after {
 
 /* Cartões adaptados para o fundo escuro */
 .status-card, .pedido-card {
-    background-color: #121212; /* Cinza escuro premium para os blocos */
+    background-color: #121212; /* Mantém o fundo escuro premium */
     padding: 35px;
     border-radius: 16px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    
+    /* Substituímos o verde por uma borda roxa escura bem sutil.
+       Se preferires sem borda nenhuma, podes mudar para: border: none;
+    */
+    border: 1px solid rgba(73, 32, 77, 0.3); 
 }
 
 .status-card h3, .pedido-card h3 {
@@ -198,13 +201,15 @@ nav ul li a:hover::after {
 
 /* Emblema de Interferência */
 .badge-limpo {
-    background-color: rgba(52, 168, 83, 0.15);
-    color: #81c995;
+    background-color: rgba(73, 32, 77, 0.2); /* Fundo roxo translúcido */
+    color: #49204D;                           /* Texto no Roxo 1 */
+    filter: brightness(1.4);                  /* Destaca o roxo no fundo escuro */
     padding: 6px 14px;
     border-radius: 20px;
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
+    border: 1px solid rgba(73, 32, 77, 0.4);  /* Borda roxa fina */
 }
 
 /* ==========================================================================

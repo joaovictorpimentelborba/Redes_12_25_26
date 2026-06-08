@@ -209,7 +209,7 @@ nav ul li a:hover::after {
    ========================================================================== */
 .features-section {
     /* Faz a transição suave de Entrada (Branco -> Preto) */
-    background: linear-gradient(to bottom, #FFFFFF 0%, #000000 20%, #000000 100%);
+    background: linear-gradient(to bottom, #FFFFFF 0%, #000000 25%, #000000 100%);
     padding: 140px 20px 160px 20px; /* Aumentado o padding inferior para preparar a saída */
 }
 
