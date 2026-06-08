@@ -9,9 +9,9 @@
             </div>
 
             <div class="integrante-box">
-                <h4>Marcos Morera</h4>
+                <h4>Marcos Moreira</h4>
                 <p>Tel: +351 928 156 781</p>
-                <p>Email: xxxxxx@gmail.com</p>
+                <p>Email: al_35880@aegp.edu.pt</p>
             </div>
         </div>
 

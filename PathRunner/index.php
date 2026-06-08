@@ -17,13 +17,13 @@
             <div class="hero-text">
                 <h1>O Futuro da Logística Interna</h1>
                 <p>O Path Runner é um veículo autónomo desenvolvido para otimizar o transporte de materiais didáticos e
-                    objetos entre ambientes escolares. Equipado com sistemas inteligentes de desvio de obstáculos e
-                    navegação precisa por linhas guiadas.</p>
+                    objetos entre ambientes escolares. Equipado com sistemas inteligentes de deteção de obstáculos e
+                    navegação por linhas guiadas.</p>
             </div>
 
             <div class="hero-image-placeholder">
                 <div class="glow-effect"></div>
-                <span class="icon-robot">🤖</span>
+                <span class="icon-robot">IMG</span>
             </div>
         </div>
     </main>
@@ -42,7 +42,7 @@
 
                 <div class="feature-box">
                     <span class="feature-icon">🛑</span>
-                    <h3>Evasão de Obstáculos</h3>
+                    <h3>Deteção de Obstáculos</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mollis pretium lorem primis cubilia cut.
                         Dictumst nisl proin primis est ut facilisis congue sodales.</p>
                 </div>
